@@ -1,0 +1,297 @@
+{
+  "users": [
+    {
+      "id": "4",
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "address": {
+        "street": "Hoeger Mall",
+        "suite": "Apt. 692",
+        "city": "South Elvis",
+        "zipcode": "53919-4257",
+        "geo": {
+          "lat": "29.4572",
+          "lng": "-164.2990"
+        }
+      },
+      "phone": "493-170-9623 x156",
+      "website": "kale.biz",
+      "company": {
+        "name": "Robel-Corkery",
+        "catchPhrase": "Multi-tiered zero tolerance productivity",
+        "bs": "transition cutting-edge web services"
+      }
+    },
+    {
+      "id": "5",
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "address": {
+        "street": "Skiles Walks",
+        "suite": "Suite 351",
+        "city": "Roscoeview",
+        "zipcode": "33263",
+        "geo": {
+          "lat": "-31.8129",
+          "lng": "62.5342"
+        }
+      },
+      "phone": "(254)954-1289",
+      "website": "demarco.info",
+      "company": {
+        "name": "Keebler LLC",
+        "catchPhrase": "User-centric fault-tolerant solution",
+        "bs": "revolutionize end-to-end systems"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "address": {
+        "street": "Norberto Crossing",
+        "suite": "Apt. 950",
+        "city": "South Christy",
+        "zipcode": "23505-1337",
+        "geo": {
+          "lat": "-71.4197",
+          "lng": "71.7478"
+        }
+      },
+      "phone": "1-477-935-8478 x6430",
+      "website": "ola.org",
+      "company": {
+        "name": "Considine-Lockman",
+        "catchPhrase": "Synchronised bottom-line interface",
+        "bs": "e-enable innovative applications"
+      }
+    },
+    {
+      "id": "7",
+      "name": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "email": "Telly.Hoeger@billy.biz",
+      "address": {
+        "street": "Rex Trail",
+        "suite": "Suite 280",
+        "city": "Howemouth",
+        "zipcode": "58804-1099",
+        "geo": {
+          "lat": "24.8918",
+          "lng": "21.8984"
+        }
+      },
+      "phone": "210.067.6132",
+      "website": "elvis.io",
+      "company": {
+        "name": "Johns Group",
+        "catchPhrase": "Configurable multimedia task-force",
+        "bs": "generate enterprise e-tailers"
+      }
+    },
+    {
+      "id": "8",
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me",
+      "address": {
+        "street": "Ellsworth Summit",
+        "suite": "Suite 729",
+        "city": "Aliyaview",
+        "zipcode": "45169",
+        "geo": {
+          "lat": "-14.3990",
+          "lng": "-120.7677"
+        }
+      },
+      "phone": "586.493.6943 x140",
+      "website": "jacynthe.com",
+      "company": {
+        "name": "Abernathy Group",
+        "catchPhrase": "Implemented secondary concept",
+        "bs": "e-enable extensible e-tailers"
+      }
+    },
+    {
+      "id": "9",
+      "name": "Glenna Reichert",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io",
+      "address": {
+        "street": "Dayna Park",
+        "suite": "Suite 449",
+        "city": "Bartholomebury",
+        "zipcode": "76495-3109",
+        "geo": {
+          "lat": "24.6463",
+          "lng": "-168.8889"
+        }
+      },
+      "phone": "(775)976-6794 x41206",
+      "website": "conrad.com",
+      "company": {
+        "name": "Yost and Sons",
+        "catchPhrase": "Switchable contextually-based project",
+        "bs": "aggregate real-time technologies"
+      }
+    },
+    {
+      "id": "10",
+      "name": "Clementina DuBuque",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "address": {
+        "street": "Kattie Turnpike",
+        "suite": "Suite 198",
+        "city": "Lebsackbury",
+        "zipcode": "31428-2261",
+        "geo": {
+          "lat": "-38.2386",
+          "lng": "57.2232"
+        }
+      },
+      "phone": "024-648-3804",
+      "website": "ambrose.net",
+      "company": {
+        "name": "Hoeger LLC",
+        "catchPhrase": "Centralized empowering task-force",
+        "bs": "target end-to-end models"
+      }
+    },
+    {
+      "id": "5828",
+      "name": "Bishnu Prasad Mohapatro",
+      "username": "bishnu",
+      "email": "bishnu@gmail.com",
+      "address": {
+        "street": "sdgg",
+        "suite": "xfsad",
+        "city": "dfdsg",
+        "zipcode": "12345"
+      }
+    },
+    {
+      "id": "1c7d",
+      "name": "Bishnu344",
+      "username": "bishnu 3",
+      "email": "bishnu3@gmail.com",
+      "address": {
+        "street": "fffdc",
+        "suite": "dsff",
+        "city": "sdfff",
+        "zipcode": "22334"
+      }
+    },
+    {
+      "id": "f37c",
+      "name": "Bishnu Prasad",
+      "username": "bishnu",
+      "email": "bishnu@7.com",
+      "address": {
+        "street": "gffhh",
+        "suite": "dffgg",
+        "city": "dfdf",
+        "zipcode": "13224"
+      }
+    },
+    {
+      "id": "2f92",
+      "name": "Aditya Mohanty",
+      "username": "aditya",
+      "email": "aditya@gmail.com",
+      "address": {
+        "street": "ddf",
+        "suite": "dfff",
+        "city": "sas",
+        "zipcode": "1234432"
+      }
+    },
+    {
+      "id": "1763",
+      "name": "Yash Jain",
+      "username": "yash",
+      "email": "yash@gmail.com",
+      "address": {
+        "street": "fgg",
+        "suite": "sdg",
+        "city": "dgg",
+        "zipcode": "224557"
+      }
+    },
+    {
+      "id": "14b8",
+      "name": "hhdgdh",
+      "username": "hdhhdhd",
+      "email": "hsh@hh.kj",
+      "address": {
+        "street": "hggg",
+        "suite": "ghhh",
+        "city": "ghj",
+        "zipcode": "9887"
+      }
+    },
+    {
+      "id": "28b6",
+      "name": "hhdgd",
+      "username": "hdhhd",
+      "email": "hgs@kj.kjj",
+      "address": {
+        "street": "fffdc",
+        "suite": "xfsad",
+        "city": "fdhfgh",
+        "zipcode": "22334"
+      }
+    },
+    {
+      "id": "c82c",
+      "name": "Subham Mahanta",
+      "username": "subham",
+      "email": "subham@gail.com",
+      "address": {
+        "street": "ffsd",
+        "suite": "sdgs",
+        "city": "wvb",
+        "zipcode": "65438"
+      }
+    },
+    {
+      "id": "8f5d",
+      "name": "Hghhs",
+      "username": "hhshs",
+      "email": "hgh@hh.kjh",
+      "address": {
+        "street": "jhbs",
+        "suite": "hghgshkbkjbba",
+        "city": "kbkj",
+        "zipcode": "55353"
+      }
+    },
+    {
+      "id": "18bd",
+      "name": "yash",
+      "username": "yash",
+      "email": "yash@g.xom",
+      "address": {
+        "street": "",
+        "suite": "",
+        "city": "",
+        "zipcode": ""
+      }
+    },
+    {
+      "id": "b414",
+      "name": "yash234",
+      "username": "yash",
+      "email": "yash@jh.kj",
+      "address": {
+        "street": "sss",
+        "suite": "",
+        "city": "",
+        "zipcode": "213"
+      }
+    }
+  ]
+}

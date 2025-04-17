@@ -25,7 +25,7 @@ import { useCallback, useEffect, useState } from "react";
 import TablePagination from "@mui/material/TablePagination";
 
 function App() {
-  const [formData, setFormData] = useState({
+  const dto = {
     name: "",
     username: "",
     email: "",
@@ -35,7 +35,8 @@ function App() {
       city: "",
       zipcode: "",
     },
-  });
+  };
+  const [formData, setFormData] = useState(dto);
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [page, setPage] = useState(0);
@@ -43,6 +44,9 @@ function App() {
   const [selectedUserId, setSelectedUserId] = useState(null);
   const [open, setOpen] = useState(false);
   const [formErrors, setFormErrors] = useState({});
+  const [userData, setUserData] = useState([]);
+  const [filterData, setFilterData] = useState(userData);
+  const [debouncedQuery, setDebouncedQuery] = useState(search);
 
   const handleEdit = (user) => {
     setFormData({
@@ -81,9 +85,31 @@ function App() {
   };
 
   const { data, isloading, error } = useGetUsersQuery();
+
   const [addUser] = useCreateUsersMutation();
   const [updateUser] = useUpdateUsersMutation();
   const [deleteUser] = useDeleteUsersMutation();
+
+  useEffect(() => {
+    if (data) {
+      setUserData(data);
+      setFilterData(data);
+    }
+  }, [data]);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedQuery(search);
+    }, 500);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [search]);
+
+  useEffect(() => {
+    filterUserData(debouncedQuery);
+  }, [debouncedQuery]);
 
   const handleSubmit = () => {
     const errors = {};
@@ -128,17 +154,28 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedSearch(search);
-    }, 1000);
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [search]);
+  const filterUserData = (e) => {
+    const newFilterUserData = userData?.filter(
+      (user) =>
+        user.name.toLowerCase().includes(e.toLowerCase()) ||
+        user.username.toLowerCase().includes(e.toLowerCase())
+    );
+
+    setFilterData(newFilterUserData);
+  };
 
   if (isloading) return <p>Loading...</p>;
   if (error) return <p>There was an error</p>;
+
+  const tableHeaders = [
+    "Sl No",
+    "Name",
+    "Username",
+    "Email",
+    "Address",
+    "Edit",
+    "Delete",
+  ];
 
   return (
     <div
@@ -190,17 +227,7 @@ function App() {
               variant="contained"
               onClick={() => {
                 setOpen(true);
-                setFormData({
-                  name: "",
-                  username: "",
-                  email: "",
-                  address: {
-                    street: "",
-                    suite: "",
-                    city: "",
-                    zipcode: "",
-                  },
-                });
+                setFormData(dto);
                 setSelectedUserId(null);
               }}
             >
@@ -221,54 +248,18 @@ function App() {
           <Table sx={{ width: "100%" }}>
             <TableHead>
               <TableRow sx={{ backgroundColor: "#1976d2" }}>
-                <TableCell
-                  sx={{ fontWeight: "bold", fontSize: "1rem", color: "#fff" }}
-                >
-                  Sl No
-                </TableCell>
-                <TableCell
-                  sx={{ fontWeight: "bold", fontSize: "1rem", color: "#fff" }}
-                >
-                  Name
-                </TableCell>
-                <TableCell
-                  sx={{ fontWeight: "bold", fontSize: "1rem", color: "#fff" }}
-                >
-                  Username
-                </TableCell>
-                <TableCell
-                  sx={{ fontWeight: "bold", fontSize: "1rem", color: "#fff" }}
-                >
-                  Email
-                </TableCell>
-                <TableCell
-                  sx={{ fontWeight: "bold", fontSize: "1rem", color: "#fff" }}
-                >
-                  Address
-                </TableCell>
-                <TableCell
-                  sx={{ fontWeight: "bold", fontSize: "1rem", color: "#fff" }}
-                >
-                  Edit
-                </TableCell>
-                <TableCell
-                  sx={{ fontWeight: "bold", fontSize: "1rem", color: "#fff" }}
-                >
-                  Delete
-                </TableCell>
+                {tableHeaders.map((header) => (
+                  <TableCell
+                    key={header}
+                    sx={{ fontWeight: "bold", fontSize: "1rem", color: "#fff" }}
+                  >
+                    {header}
+                  </TableCell>
+                ))}
               </TableRow>
             </TableHead>
             <TableBody>
-              {data
-                ?.filter(
-                  (user) =>
-                    user.name
-                      .toLowerCase()
-                      .includes(debouncedSearch.toLowerCase()) ||
-                    user.username
-                      .toLowerCase()
-                      .includes(debouncedSearch.toLowerCase())
-                )
+              {filterData
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((user, index) => (
                   <TableRow key={user.id}>
@@ -311,6 +302,7 @@ function App() {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
+
       <Modal
         open={open}
         onClose={() => {
