@@ -16,12 +16,11 @@ import {
   Typography,
   Box,
   TextField,
-  debounce,
 } from "@mui/material";
 import { Paper, IconButton, Button } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TablePagination from "@mui/material/TablePagination";
 
 function App() {
@@ -129,11 +128,11 @@ function App() {
   };
 
   useEffect(() => {
-    const handler = setTimeout(() => {
+    const delaySearch = setTimeout(() => {
       setDebouncedSearch(search);
     }, 1000);
     return () => {
-      clearTimeout(handler);
+      clearTimeout(delaySearch);
     };
   }, [search]);
 
